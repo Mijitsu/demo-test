@@ -7,27 +7,27 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // Этот виджет является корнем вашего приложения.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
+        // Это тема вашего приложения.
         //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
+        // ПОПРОБУЙТЕ ЭТО: Попробуйте запустить ваше приложение с помощью "flutter run". Вы увидите,
+        // что приложение имеет фиолетовую панель инструментов. Затем, не закрывая приложение,
+        // попробуйте изменить seedColor в colorScheme ниже на Colors.green
+        // и затем выполните "горячую перезагрузку" (сохраните ваши изменения или нажмите кнопку "горячей
+        // перезагрузки" в поддерживающей Flutter IDE, или нажмите "r", если вы использовали
+        // командную строку для запуска приложения).
         //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
+        // Обратите внимание, что счётчик не сбросился обратно на ноль; состояние приложения
+        // не теряется во время перезагрузки. Чтобы сбросить состояние, используйте горячую
+        // перезагрузку вместо этого.
         //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
+        // Это также работает для кода, а не только для значений: Большинство изменений кода
+        // можно протестировать с помощью горячей перезагрузки.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -39,14 +39,14 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+  // Этот виджет является домашней страницей вашего приложения. Он имеет состояние, что означает,
+  // что у него есть объект State (определённый ниже), который содержит поля, влияющие на
+  // то, как он выглядит.
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+  // Этот класс — конфигурация для состояния. Он содержит значения (в данном случае заголовок),
+  // предоставленные родительским виджетом (в данном случае виджетом App) и
+  // используемые методом build состояния. Поля в подклассе Widget всегда
+  // помечены как "final".
 
   final String title;
 
@@ -59,54 +59,52 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
+      // Этот вызов setState сообщает фреймворку Flutter, что что-то изменилось в этом состоянии,
+      // что вызывает повторный вызов метода build ниже, чтобы отображение могло отразить обновленные значения.
+      // Если бы мы изменили _counter без вызова setState(), метод build не был бы вызван снова,
+      // и ничего не произошло бы.
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
+    // Этот метод вызывается снова каждый раз, когда вызывается setState, например, как это сделано
+    // методом _incrementCounter выше.
     //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    // Фреймворк Flutter оптимизирован для быстрого повторного вызова методов build,
+    // поэтому вы можете просто перестроить всё, что нужно обновить, вместо того, чтобы изменять
+    // отдельные экземпляры виджетов.
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
+        // ПОПРОБУЙТЕ ЭТО: Попробуйте изменить цвет здесь на определённый цвет (например, на
+        // Colors.amber) и выполните горячую перезагрузку, чтобы увидеть изменение цвета AppBar,
+        // пока остальные цвета остаются теми же.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+        // Здесь мы берём значение из объекта MyHomePage, который был создан методом
+        // App.build, и используем его для установки заголовка нашей панели приложений.
         title: Text(widget.title),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+        // Center — это виджет компоновки. Он принимает один дочерний элемент и размещает его
+        // в середине родительского виджета.
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
+          // Column — это тоже виджет компоновки. Он принимает список дочерних элементов и
+          // располагает их вертикально. По умолчанию он изменяет размер, чтобы поместить его
+          // дочерние элементы горизонтально и пытается быть таким высоким, как его родитель.
           //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
+          // Column имеет различные свойства для управления тем, как он изменяет размер и
+          // как он размещает свои дочерние элементы. Здесь мы используем mainAxisAlignment для
+          // центрирования дочерних элементов по вертикали; основной осью здесь является вертикальная
+          // ось, потому что Columns вертикальны (пересекающая ось будет горизонтальной).
           //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
+          // ПОПРОБУЙТЕ ЭТО: Включите "debug painting" (выберите действие "Toggle Debug Paint"
+          // в IDE или нажмите "p" в консоли), чтобы увидеть
+          // каркас для каждого виджета.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Вы нажали кнопку это количество раз:',
             ),
             Text(
               '$_counter',
@@ -117,9 +115,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: 'Увеличить',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ), // Эта завершающая запятая делает автоформатирование более удобным для методов build.
     );
   }
 }
